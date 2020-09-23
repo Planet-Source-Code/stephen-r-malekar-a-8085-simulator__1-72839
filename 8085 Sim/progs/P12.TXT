@@ -1,0 +1,11 @@
+; For more explaination of program refer page 133 of book
+; Microprocessor Techniques by A. P. Godse
+	MVI C, 0AH 	; Initialize counter
+	LXI H, 2200H 	; Initialize source memory pointer
+	LXI D, 2300H 	; Initialize destination memory pointer
+BACK: 	MOV A, M 	; Get byte from source memory block
+	STAX D 		; Store byte in the destination memory block
+	INX H 		; Increment source memory pointer
+	INX D 		; Increment destination memory pointer 
+	DCR C 		; Decrement counter 
+	JNZ BACK 	; If counter  0 repeat

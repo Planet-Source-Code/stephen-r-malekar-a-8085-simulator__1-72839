@@ -1,0 +1,16 @@
+; For more explaination of program refer page 132 of book
+; Microprocessor Techniques by A. P. Godse
+	LDA 2200H
+	MOV C,A		; Initialize counter
+	LXI H, 2201H	; Initialize pointer
+	SUB A		; Sum low = 0
+	MOV B,A		; Sumhigh = 0
+BACK:	ADD M		; Sum = sum + data
+	JNC SKIP
+	INR B		; Add carry to MSB of SUM
+SKIP:	INX H		; Increment pointer
+	DCR C		; Decrement counter
+	JNZ BACK	; Check if counter 0 repeat
+	STA 2300H	; Store lower byte
+	MOV A,B
+	STA 2301H	; Store higher byte

@@ -1,0 +1,8 @@
+; For more explaination of program refer page 118 of book
+; Microprocessor Techniques by A. P. Godse
+MVI B,00
+MVI C,00
+DCR C
+DCR B
+DCX B
+HLT 

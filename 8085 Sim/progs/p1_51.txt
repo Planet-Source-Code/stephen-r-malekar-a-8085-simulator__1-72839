@@ -1,0 +1,5 @@
+MOV A,#30
+MOV R0,#40
+ADD A,R0
+MOV R1,#00
+MOVX @ R1,A

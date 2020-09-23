@@ -1,0 +1,13 @@
+; For more explaination of program refer page 153 of book
+; Microprocessor Techniques by A. P. Godse
+	LDA 2200H
+	MOV C, A	; Initialize counter
+	XRA A		; Maximum = Minimum possible value = 0
+	LXI H, 2201H	; Initialize pointer
+BACK:	CMP M		; Is number > maximum
+	JNC SKIP
+	MOV A, M	; Yes, replace maximum
+SKIP: 	INX H 	 
+	DCR C
+	JNZ BACK
+	STA 2300H 	; Store maximum number

@@ -1,0 +1,10 @@
+; For more explaination of program refer page 122 of book
+; Microprocessor Techniques by A. P. Godse
+MOV A, L	; Get lower 2 digits of no. 1
+ADD E		; Add two lower digits
+DAA		; Adjust result to valid BCD
+STA 2300H	; Store partial result
+MOV A, H	; Get most significant 2 digits of no. 2
+ADC D		; Add two most significant digits 
+DAA		; Adjust result to valid BCD 
+STA 2301H	; Store partial result

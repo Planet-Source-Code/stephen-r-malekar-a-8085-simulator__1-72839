@@ -1,0 +1,8 @@
+; For more explaination of program refer page 121 of book
+; Microprocessor Techniques by A. P. Godse
+LXI H, 2200H	; Initialize pointer
+MOV A,M		; Get the first number
+INX H		; Increment the pointer
+ADD M		; Add two numbers
+DAA		; Convert HEX to valid BCD
+STA 2300H	; Store the result
