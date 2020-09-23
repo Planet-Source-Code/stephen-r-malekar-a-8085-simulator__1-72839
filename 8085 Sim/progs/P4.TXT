@@ -1,0 +1,8 @@
+; For more explaination of program refer page 117 of book
+; Microprocessor Techniques by A. P. Godse
+LXI H, 2000H 	; HL points 2000 H
+MOV A,M 	; Get first operand
+INX H 		; HL points 2001H
+SUB M		; Subtract second operand
+INX H		; HL points 2002H
+MOV M,A	 	; Store result at 2002H

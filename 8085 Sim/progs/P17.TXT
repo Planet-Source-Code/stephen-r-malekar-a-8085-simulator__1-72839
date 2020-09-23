@@ -1,0 +1,5 @@
+; For more explaination of program refer page 155 of book
+; Microprocessor Techniques by A. P. Godse
+LDA 2200H	; Get the number 
+CMA		; Complement number
+STA 2300H	; Store the result

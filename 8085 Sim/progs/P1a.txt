@@ -1,0 +1,4 @@
+; For more explaination of program refer page103 of book
+; Microprocessor techniques by A. P. Godse 
+MVI 	A, 52H 	; Store 52H in the accumulator
+STA 	2000H 	; Copy accumulator contents at address 2000 H

@@ -1,0 +1,21 @@
+; For more explaination of program refer page 136 of book
+; Microprocessor Techniques by A. P. Godse
+	LHLD 2200H	; Get the dividend
+	LDA 2202H
+	MOV C, A	; Get the divisor
+	LXI D, 0000H	; Quotient = 0
+BACK:	MOV A, L
+	SUB C
+	MOV L, A	; Save partial result
+	JNC SKIP	; if CY 1 jump
+	DCR H		; Subtract borrow of previous subtraction
+SKIP:	INX D		; Increment quotient
+	MOV A, H
+	CPI 00		; Check if dividend
+	JNZ BACK	; < divisor
+	MOV A, L	; if no repeat
+	CMP C
+	JNC BACK
+	SHLD 2302H	; Store the remainder
+	XCHG
+	SHLD 2300H	; Store the quotien

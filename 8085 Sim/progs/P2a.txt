@@ -1,0 +1,9 @@
+; For more explaination of program refer page 103 of book
+; Microprocessor Techniques by A. P. Godse
+
+LDA 	2000 H	; Get the contents of memory location 2000H into accumulator 		
+MOV 	B,A 	; save the contents in B register
+LDA 	2001 H 	; Get the contents of memory location 2000H into accumulator.		
+STA 	2000 H 	; Store the contents of accumulator at address 2000H.
+MOV 	A,B 	; Get the saved contents back into A register
+STA 	2001H 	; Store the contents of accumulator at address 2000H

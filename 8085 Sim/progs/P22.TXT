@@ -1,0 +1,12 @@
+; For more explaination of program refer page 277 of book
+; Microprocessor Techniques by A. P. Godse
+LXI SP,2200H
+LXI B,2030H
+LXI D,4050H
+PUSH D
+PUSH B
+MOV A,C
+ADD E
+MOV D,A
+POP B
+POP D

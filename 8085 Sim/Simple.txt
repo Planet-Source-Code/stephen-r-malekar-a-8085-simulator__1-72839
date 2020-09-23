@@ -1,0 +1,5 @@
+Start:	IN 80H
+	ADI 02H
+	STA 2000H
+	OUT 70H
+Stop:	RST 1

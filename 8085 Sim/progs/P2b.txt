@@ -1,0 +1,15 @@
+; For more explaination of program refer page 104 of book
+; Microprocessor Techniques by A. P. Godse
+LXI	H,2000H 	; Initialize HL register pair as a pointer
+			; to memory location 2000H
+LXI 	D,2001 H 	; Initialize DE register pair as a pointer
+			; to memory location 2001H
+MOV 	B,M 		; Get the contents of memory location
+			; 1000H into B register
+LDAX 	D		; Get the contents of memory location
+			; 1001H into A register
+MOV 	M,A 		; Store the contents of A register into memory
+			; location 2000H
+MOV 	A,B 		; Copy the contents of B register into accumulator
+STAX 	D 		; Store the contents of A register into memory
+			; location 2001H.

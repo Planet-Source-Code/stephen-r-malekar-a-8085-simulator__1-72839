@@ -1,0 +1,11 @@
+; For more explaination of program refer page 156 of book
+; Microprocessor Techniques by A. P. Godse
+LDA 2201 H 	; Get the Most significant BCD digit
+RLC
+RLC
+RLC
+RLC 		; Adjust the position
+MOV C, A 	; store the partial result
+LDA 2200 H 	; Get the lower BCD digit
+ADD C		; Add lower BCD digit
+STA 2300 H	; Store the result

@@ -1,0 +1,11 @@
+; For more explaination of program refer page 131 of book
+; Microprocessor Techniques by A. P. Godse
+	LDA 2200
+	MOV C, A	;	Initialize counter
+	SUB A		;	sum = 0
+	LXI H, 2201H	;	Initialize pointer
+BACK:	ADD M		;	SUM = SUM + data
+	INX H		;	increment pointer
+	DCR C		;	Decrement counter
+	JNZ BACK	;	if counter  0 repeat
+	STA 2300H	;	store sum

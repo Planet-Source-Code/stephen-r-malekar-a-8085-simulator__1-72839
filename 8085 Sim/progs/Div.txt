@@ -1,0 +1,12 @@
+Start:	LXI H, 2000H
+	MVI C, 00H
+	MOV A, M
+	INX H
+UP:	CMP M
+	JC ESC
+	SUB M
+	INR C
+	JMP UP
+ESC:	INX H
+	MOV M, C
+	HLT	

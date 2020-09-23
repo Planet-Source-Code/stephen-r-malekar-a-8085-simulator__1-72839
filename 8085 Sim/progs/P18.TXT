@@ -1,0 +1,6 @@
+; For more explaination of program refer page 155 of book
+; Microprocessor Techniques by A. P. Godse
+LDA 2200 H 	; Get the number
+CMA		; Complement the number
+ADI 01H		; Add one in the number
+STA 2300H 	; Store the result

@@ -1,0 +1,16 @@
+; For more explaination of program refer page 165 of book
+; Microprocessor Techniques by A. P. Godse
+MVI C, 08H 	; Initialize count with 8
+Back: MOV A,B 	;
+RRC		; Rotate B register contents right
+MOV B,A 	; Save contents of register B 
+JNC skip 	; If no carry skip
+MVI A,0C0H 
+SIM 		; If carry, send high on SOD 
+JMP NEXT
+SKIP: MVI A,40H
+SIM 		; If no carry, send low on SOD
+; This is a simulation therefore real time delay is skipped 
+NEXT: DCR C 	; Decrement count by 1
+JNZ Back 	; if count=0 ,if not repeat 
+HLT 		; Stop program execution

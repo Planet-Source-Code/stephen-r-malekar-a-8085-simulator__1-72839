@@ -1,0 +1,3 @@
+Start:	LDA 2000H ;Load Accum with 2000H
+	XRA A	  ;ExOR Accum 
+	HLT	  ;Stop	

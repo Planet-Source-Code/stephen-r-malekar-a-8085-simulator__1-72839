@@ -1,0 +1,4 @@
+; For more explaination of program refer page103 of book
+; Microprocessor techniques by A. P. Godse
+LXI 	H, 2000H 	; Load HL with 2000H
+MVI 	M, 52H 		; Store 52H in memory location pointed by HL register pair (2000H)

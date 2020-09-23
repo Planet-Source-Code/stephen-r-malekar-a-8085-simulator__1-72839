@@ -1,0 +1,4 @@
+MOV A,#9F
+MOV R0,#40
+SUBB A,R0
+SWAP A

@@ -1,0 +1,4 @@
+Start:	MVI A, 0AH
+	CMA
+	STA 6000H
+	HLT

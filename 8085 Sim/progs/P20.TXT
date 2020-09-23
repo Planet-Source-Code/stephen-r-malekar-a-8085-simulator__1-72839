@@ -1,0 +1,12 @@
+; For more explaination of program refer page 156 of book
+; Microprocessor Techniques by A. P. Godse
+LDA 2200 H 	; Get the packed BCD number
+ANI 0F0 H 	; Mask lower nibble
+RRC
+RRC
+RRC
+RRC 		; Adjust higher BCD digit as a lower digit
+STA 2301 H	; Store the partial result
+LDA 2200 H 	; Get the original BCD number
+ANI 0 F H	; Mask higher nibble
+STA 2201 H 	; store the result

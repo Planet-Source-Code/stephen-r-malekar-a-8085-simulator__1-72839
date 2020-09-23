@@ -1,0 +1,12 @@
+; For more explaination of of program refer page 135 of book
+; Microprocessor Techniques by A. P. Godse
+	LDA 2200H
+	MOV E, A
+	MVI D, 00	; Get the first number
+	LDA 2201H
+	MOV C, A	; Initialize counter
+	LXI H, 0000H	; Result = 0
+BACK:	DAD D		; Result = result + first number
+	DCR C		; decrement count
+	JNZ BACK	; If count  0 repeat
+	SHLD 2300H	; Store result

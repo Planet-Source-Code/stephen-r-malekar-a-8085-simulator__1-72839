@@ -1,0 +1,14 @@
+Start:	LXI H, 2000H
+	MVI B, 00H
+	MVI D, 00H
+	MVI C, 05H
+Up:	MOV A, M
+	RAR
+	JC Odd
+	INR D
+	JMP Even
+Odd:	INR B
+Even:	INX H
+	DCR C
+	JNZ Up
+	HLT		

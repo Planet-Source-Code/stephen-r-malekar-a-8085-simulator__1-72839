@@ -1,0 +1,12 @@
+; For more explaination of program refer page 117 of book
+; Microprocessor Techniques by A. P. Godse
+LHLD 2000H 	; Get first 16-bit number in HL
+XCHG 		; Save first 16-bit number in DE
+LHLD 2002H	; Get second 16-bit number in HL
+MOV A, E 	; Get lower byte of the first number 
+ADD L 		; Add lower byte of the second number 
+MOV L, A 	; Store result in L register
+MOV A, D 	; Get higher byte of the first number
+ADC H 		; Add higher byte of the second number with carry
+MOV H, A 	; Store result in H register
+SHLD 2004H	; Store 16-bit result in memory locations 2004H and 2005H.

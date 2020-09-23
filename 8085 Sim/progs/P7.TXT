@@ -1,0 +1,8 @@
+; For more explaination of program refer page 119 of book
+; Microprocessor Techniques by A. P. Godse
+MVI B,0FF
+MVI C,0FF
+INR B
+INR C
+INX B
+HLT
